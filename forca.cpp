@@ -1,8 +1,9 @@
 #include <iostream>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
 using namespace std;
-string word,kword;
-char guess;
+string kword;
+char guess,*word;
 int len,life=3,w=0;
 
 
@@ -11,9 +12,10 @@ void analyze_word();
 void analyze_char();
 
 int main(){
+    word=(char*)malloc(sizeof(word)+1);
     // word that player will guess
     cout<<"write a word to start the game: ";
-    cin>>word;
+    gets(word);
     analyze_word();
     while(life>0){
         cout<<"lifes: "<<life<<'\n';
@@ -22,6 +24,7 @@ int main(){
         analyze_char();
         if (kword==word){
             cout <<"\nyou won!! the word was "<<word<<"\n";
+            free(word);
             break;
         }
 
