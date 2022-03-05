@@ -2,6 +2,8 @@
 
 using namespace std;
 
+
+
 char matriz[3][3];
 int player;
 
@@ -20,7 +22,6 @@ int main(){
         //player1 command
         player1();
         draw();
-
         //scan
         scan();
         if(player>0){

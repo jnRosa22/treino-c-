@@ -4,7 +4,14 @@
 
 using namespace std;
 
+void ll();
+
 int main(){
+    ll();
+    ll();
+    return 0;
+}
+void ll(){
     char *letras;
     letras= (char *) malloc(sizeof(letras)+1);
 
@@ -12,7 +19,7 @@ int main(){
 
     cout << letras <<"\n";
     free(letras);
-    cout << letras <<"\n";
+    letras=NULL;
     system("pause");
-    return 0;
+    
 }
