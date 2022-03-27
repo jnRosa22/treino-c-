@@ -16,7 +16,6 @@ void ll(){
     letras= (char *) malloc(sizeof(letras)+1);
 
     gets(letras);
-
     cout << letras <<"\n";
     free(letras);
     letras=NULL;
